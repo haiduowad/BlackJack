@@ -70,9 +70,12 @@ def take_bet(chips):
 			print("Please enter an integer only")
 			continue
 		else:
-			if taken_bet > player_chips.total or taken_bet == 0:
+			if taken_bet > player_chips.total:
 				print("You cannot exceed your total number of chips")
 				continue
+            elif taken_bet == 0:
+                print("You cannot bet 0") 
+                continue
 			chips.bet = taken_bet
 			break
 
